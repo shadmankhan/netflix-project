@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+}
+.app {
+  background-color: #111;
+  max-height: 100%;
+}
+@media screen and (prefers-reduced-motion: no-preference) {
+  html,
+  body {
+    scroll-behavior: smooth;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .app {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .app > * {
+    order: 9999;
+  }
+
+  Nav {
+    order: 0;
+  }
+  Banner {
+    order: 1;
+  }
+  Row {
+    order: 2;
+  }
+  footer {
+    order: 3;
+  }
+  .arrow {
+    order: 44;
+  }
+}

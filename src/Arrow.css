@@ -1,0 +1,39 @@
+/* Arrow to Top */
+
+.arrow {
+    position: absolute;
+    padding-bottom: 25px;;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .arrow span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-top: 5px solid #ac0000;
+    border-left: 5px solid #ac0000;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+  }
+  .arrow span:nth-child(2) {
+    animation-delay: -0.2s;
+  }
+  .arrow span:nth-child(3) {
+    animation-delay: -0.4s;
+  }
+  @keyframes animate {
+    0% {
+      opacity: 0;
+      transform: rotate(45deg) translate(20px, 20px);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px, -20px);
+    }
+  }
+  
